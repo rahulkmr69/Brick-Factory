@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+</head>
+<body>
+	<form action="/search/addStock/" method="post">
+	{% csrf_token %}
+	<input type="text" name ="no" placeholder="Number Of Bricks added to Stock" size="40" style="height:40px;margin-bottom:10px;"></br>
+	<input type="submit" value="Add to Stock">
+	</form>
+</body>
+</html>

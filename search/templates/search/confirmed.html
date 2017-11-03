@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+<style>
+	th td{
+		padding:15px;
+	}
+</style>
+</head>
+<body style="text-align:center;">
+	{% if data %}
+		<h1>Confirmed Orders</h1>
+		<table style="width=100%;text-align:center;">
+		<tr><th style="width:5%;">Order Id</th><th style="width:10%;">Phone No</th><th style="width:60%;">Address</th><th style="width:20%;">Date & Time</th><th style="width:20%;">Amount</th><th>Type</th>
+		{% for i in data %}
+		<tr>
+		<td>{{ i.0 }}</td><td> {{ i.1 }} </td><td>{{ i.2 }}</td><td> {{ i.3 }}</td><td> {{ i.4 }}</td><td> {{ i.6 }}</td>
+		{% endfor %}
+		</table>
+	{% else %}
+		<h1> No Confirmed Orders </h1>
+	{% endif %}
+	<form action="/search/cleanConfirmed/">
+	{% csrf_token %}
+	<input type="submit" value="Clean all confirmed" style="margin-top:20px;">
+	</form>
+</body>
+</html>

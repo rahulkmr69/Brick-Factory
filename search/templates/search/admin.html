@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Webpage</title>
+<link rel="stylesheet" href="{% static 'admin_style.css' %}" type="text/css">
+</head>
+<body>
+</body>
+	<div id="main">
+	<h1><div id="header"><font color='white'>Om Bricks</font></div></h1>
+	<h4>ॐ नमः शिवाय </h4>
+	</div>
+	<ul>
+		<li><a href="/search/newRate/">Change Rate</a></li>
+		<li><a href="/search/ChangeStatus/">Change Order Status</a></li>
+		<li><a href="/search/pending/">Pending Orders - {{ no }}</a></li>
+		<li><a href="/search/confirmed/">Confirmed Orders</a></li>
+		<li><a href="/search/incr/">Add Bricks Stock</a></li>
+		<li><a href="/search/rworker/">Register Worker</a></li>
+		<li><a href="/search/delete/">Delete User/Worker</a></li>
+		<li><a href="/search/attendance/">Attendance</a></li>
+		<li><a href="/search/pswd/">Change Password</a></li>
+		<li><a href="/search/allPay/">All Payments</a></li>
+		<li><a href="/search/workerPayment/">View Worker Payment</a></li>
+		<li><a href="/search/payWorker/">Pay Worker</a></li>
+		<li><a href="/search/logout/">Log Out</a></li>
+	</ul>
+	<div style="margin-top:40px;text-align:center;">
+		<h2>In Stock : {{ have }}</h2>
+		<h2>Demanded Bricks : {{ pending }}</h2>
+	</div>
+</html>

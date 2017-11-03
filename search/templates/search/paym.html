@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+</head>
+<body>
+	<form action="/search/paySuccess/" method="post">
+	{% csrf_token %}
+	<input type="text" name ="id" placeholder="Phone" size="20" style="height:20px;margin-bottom:10px;"></br>
+	<input type="text" name ="amount" placeholder="Amount" size="20" style="height:20px;margin-bottom:10px;"></br>
+	<input type="submit" value="Pay">
+	</form>
+</body>
+</html>

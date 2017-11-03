@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+<style>
+	body{
+	background-color:#98fb98;
+	font-family:sans-serif;
+		}
+	#main{
+	padding-top:10px;
+	background-color:green;
+	text-align:center;
+	width:100%;
+	height:100px;
+	margin-bottom:20px;
+		}
+	#main h1{
+	margin-top:0px;
+		}
+	#header{
+	margin:10px;
+		}
+</style>
+</head>
+<body style="text-align:center;">
+	<div id="main">
+	<h1><div id="header"><font color='white'>Om Bricks</font></div></h1>
+	<h4>ॐ नमः शिवाय </h4>
+	</div>
+	{% if data %}
+		<h1>Your Orders</h1>
+		<table style="width=100%;text-align:center;">
+		<tr><th style="width:5%;">Order Id</th><th style="width:60%;">Address</th><th style="width:20%;">Date & Time</th><th style="width:15%;">Amount</th ><th style="width:10%;">Status</th><th>Type</th>
+		{% for i in data %}
+		<tr>
+		<td>{{ i.0 }}</td><td> {{ i.2 }} </td><td>{{ i.3 }}</td><td> {{ i.4 }}</td><td> {{ i.5 }}</td><td> {{ i.6 }}</td>
+		{% endfor %}
+		</table>
+	{% else %}
+		<h1> No Orders </h1>
+	{% endif %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+</head>
+<body>
+	<form action="/search/cdelete/" method="post">
+	{% csrf_token %}
+	<input type="text" name ="phone" placeholder="Phone No" size="20" style="height:40px;margin-bottom:10px;"></br>
+	<h3>Select type of Brick</h3>
+			<h4>
+				<input type="radio" name="type" value="user"/><label for="perfect">User</label>
+				<input type="radio" name="type" value="worker"/><label for="female">Worker</label>
+			</h4>
+	<input type="submit" value="Delete">
+	</form>
+</body>
+</html>

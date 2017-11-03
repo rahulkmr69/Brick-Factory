@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Webpage</title>
+<link rel="stylesheet" href="{% static 'sign_style.css' %}"type="text/css">
+<script type="text/javascript" src="{% static 'chg.js' %}"></script>
+</head>
+<body>
+	<div id="main">
+		<h1><div id="header"><font color='white'>Om Bricks</font></div></h1>
+		<h4>ॐ नमः शिवाय </h4>
+	</div>
+	<ul>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">Rates</a></li>
+		<li><a href="#">Contact Us</a></li>
+	</ul>
+	<img src="{% static 'brick.jpg' %}" height="300" width="500" id="image" alt="Image" onclick="change();"/>
+	<div id="middle">
+		<form action="/search/register/" method="post">
+			{% csrf_token %}
+			<input type="text" name="fname" id="fname" size="25" placeholder="&nbsp First Name" required />
+			<input type="text" name="lname" id="last_name" size="25" placeholder="&nbsp Last Name"/><br/><br/>
+			<input type="text" name="phone" id="email" size="25" placeholder="&nbsp Phone No" required /><br/>
+			<input type="password" name="password" size="25" id="password" placeholder="&nbsp Password" required /><br/><br/>
+			<input type="password" name="repassword" size="25" id="co_password" placeholder="&nbsp Confirm Password" required /><br/><br/>
+			<input type="submit" value="Sign Up" name="sign_up" id="submit"/>
+		</form>
+	</div>
+	
+	<footer class="footer">Quality is remembered long after the price is forgotten -<font color="green">Om Bricks</font></footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+</head>
+<body>
+	<form action="/search/changeRate/" method="post">
+	{% csrf_token %}
+	<input type="text" name ="perfect" placeholder="New Perfect Brick Rate" size="20" style="height:40px;margin-bottom:10px;"></br>
+	<input type="text" name ="quarter" placeholder="New Quarter Brick Rate" size="20" style="height:40px;margin-bottom:10px;"></br>
+	<input type="submit" value="Change Rate">
+	</form>
+</body>
+</html>

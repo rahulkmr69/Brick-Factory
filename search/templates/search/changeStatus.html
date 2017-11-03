@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+</head>
+<body>
+	<form action="/search/change/" method="post">
+	{% csrf_token %}
+	<input type="text" name ="id" placeholder="Order Id" size="20" style="height:40px;margin-bottom:10px;" required ></br>
+	<input type="submit" value="Change to Confirmed Delivery">
+	</form>
+</body>
+</html>

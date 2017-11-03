@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Webpage</title>
+<link rel="stylesheet" href="{% static 'order_style.css' %}" type="text/css">
+</head>
+<body>
+	<div id="main">
+	<h1><div id="header"><font color='white'>Om Bricks</font></div></h1>
+	<h4>ॐ नमः शिवाय </h4>
+	</div>
+	<h2>
+		Hi,{{ name }} Your order of {{ no }} bricks of {{ type }} type is placed at {{ addr }} of amount {{ amount }}
+	</h2>
+	<a href="/"> click here</a>
+	<footer class="footer">Quality is remembered long after the price is forgotten -<font color="green">Om Bricks</font></footer>
+</body>
+</html>

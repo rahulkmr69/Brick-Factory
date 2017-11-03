@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webpage</title>
+</head>
+<body>
+	<form action="/search/markAttend/" method="post">
+	{% csrf_token %}
+	<input type="text" name ="id" placeholder="Phone No" size="20" style="height:40px;margin-bottom:10px;"></br>
+	<input type="submit" value="Mark Attendance">
+	</form>
+	<a href="/search/adminHome/">Return To Home</a>
+</body>
+</html>
