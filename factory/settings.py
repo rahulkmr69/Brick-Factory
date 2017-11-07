@@ -25,7 +25,7 @@ SECRET_KEY = '*pti#!elwhi5a(pug3&ki(*b2p=2-&kd_q0(8+2@0&59m=b*r7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
