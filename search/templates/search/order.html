@@ -2,6 +2,13 @@
 {% load static %}
 <html>
 <head>
+<script src= "https://www.payumoney.com/Api/REST/op/buttonScript" async="true" > </script>
+<script>
+	function myfunction(){
+		window.PUM.setData({{ amount }},"305","Bricks");
+		window.PUM.pay();
+	};
+</script>
 <title>Webpage</title>
 <link rel="stylesheet" href="{% static 'order_style.css' %}" type="text/css">
 </head>
@@ -13,7 +20,14 @@
 	<h2>
 		Hi,{{ name }} Your order of {{ no }} bricks of {{ type }} type is placed at {{ addr }} of amount {{ amount }}
 	</h2>
-	<a href="/"> click here</a>
+			<span class='pm-button' id='D62AD4EB245B5266542816D61123F9FC' onclick="myfunction();">
+  <span class="state active">
+    <input type="image" src="https://file.payumoney.com/images/payby_payumoney/new_buttons/21.png" width="131" height="37">
+  </span>
+  <span class="state clicked" style="display:none" >
+    <input type="image" src="https://file.payumoney.com/images/payby_payumoney/new_buttons/submitted/21.png" width="131" height="37">
+  </span>
+</span>
 	<footer class="footer">Quality is remembered long after the price is forgotten -<font color="green">Om Bricks</font></footer>
 </body>
 </html>
