@@ -294,4 +294,3 @@ def successfulTransact(request):
     return render(request,'search/successfulTransact.html',{})
 def failedTransact(request):
     return render(request,'search/failedTransact.html',{})
-#end
