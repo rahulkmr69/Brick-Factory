@@ -109,7 +109,7 @@ def login(request):
     connection.close
     return redirect("/search/home/")
 def signup(request):
-    context={}
+    context = {}
     return render(request ,'search/sign_up.html' , context)
 def order(request):
     context={}
